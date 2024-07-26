@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log('a user connected');
+  console.log('user connected');
 
   socket.on('set username', (username) => {
     socket.username = username;

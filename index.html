@@ -20,10 +20,13 @@
     <script>
       var socket = io();
       var username = prompt('Please enter your username:');
+
+      var input = document.getElementById('input');
+      input.placeholder = 'Enter your message as ' + username;
+
       socket.emit('set username', username);
 
       var form = document.getElementById('form');
-      var input = document.getElementById('input');
 
       form.addEventListener('submit', function(e) {
         e.preventDefault();
